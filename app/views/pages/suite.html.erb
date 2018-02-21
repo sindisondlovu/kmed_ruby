@@ -24,7 +24,7 @@
 
     <!-- Theme Styles -->
     <link rel="stylesheet" href="http://178.62.222.196/assets/css/override.css"/>
-    <link rel="stylesheet" href="http://178.62.222.196/assets/css/custom.css"/>
+    
 
     <!-- Core Scripts -->
     <script src="http://178.62.222.196/assets/js/jquery-v3.3.1.min.js"></script>
@@ -54,7 +54,8 @@
                                 <div class="clearfix"></div>
 
                                 <br />
-                                <%= image_tag "k-med-white-logo.svg" %>
+                                <%= image_tag "k-med-white-logo.svg", class: 'img-fluid d-none d-md-inline-block' %>
+                                <%= image_tag "next-state-small.png", class: 'img-fluid img-responsive d-inline-block d-md-none' %>
 <!--
                                 <img src="assets/images/k-med-white-logo.svg" class="img-fluid d-none d-md-inline-block">
 
@@ -85,7 +86,7 @@
                 <div class="col-lg-6 col-md-4 pr-0 pt-5 pb-5" style="position: relative">
                     <div class="d-flex h-100 mt-5">
                         <div class="p-3 row justify-content-center align-self-center w-100">
-                            <%= image_tag "feat-kmed-mockup.png" %><!--
+                            <%= image_tag "feat-kmed-mockup.png", class: 'float-left', :style=>"width: 100%; height: auto; object-fit: scale-down; z-index: 55;" %><!--
                             <img src="assets/images/feat-kmed-mockup.png" srcset="assets/images/feat-kmed-mockup@2x.png 2x, assets/images/feat-kmed-mockup@3x.png 3x" class="float-left" style="width: 100%; height: auto; object-fit: scale-down; z-index: 55;">-->
                         </div>
                     </div>
@@ -94,7 +95,7 @@
                     <%= image_tag "k-go-logo.png" %>
                     <h2 class="mt-5 recruitment-heading">PATIENT RECRUITMENT<br />AT THE SPEED OF NOW</h2>
                     <p class="mt-3 recruitment-text">New quick turn, automated campaign builder to get your campaigns live in less than 24 hours</p>
-                    <%= image_tag "feat-kgo-icon.svg", style: "padding-right: 150px" %><!--
+                    <%= image_tag "feat-kgo-icon.svg", :style=>"padding-right: 150px; margin-top: -50px;", class: "float-right" %><!--
                     <img src="assets/images/feat-kgo-icon.svg" class="float-right" style="padding-right: 150px; margin-top: -50px;">-->
                 </div>
             </div>
@@ -104,8 +105,7 @@
                     <img src="assets/images/k-go-logo.png" srcset="assets/images/k-go-logo@2x.png 2x, assets/images/k-go-logo@3x.png 3x" class="img-fluid">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3">
-                    <
-                    %= image_tag "feat-kmed-mockup.png" %><!--
+                    <%= image_tag "feat-kmed-mockup.png", class: "img-fluid img-responsive" %><!--
                     <img src="assets/images/feat-kmed-mockup.png" srcset="assets/images/feat-kmed-mockup@2x.png 2x, assets/images/feat-kmed-mockup@3x.png 3x" class="img-fluid img-responsive">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3">
@@ -134,7 +134,7 @@
                                 <h1 class="text-right float-right mb-0 pb-0 data-agg-heading">
                                     UNPARALLELED<br />MULTI-SOURCE
                                 </h1>
-                                <%= image_tag "feat-data-icon.svg" %><!--
+                                <%= image_tag "feat-data-icon.svg", class: "float-right mr-3" %><!--
                                 <img src="assets/images/feat-data-icon.svg" class="float-right mr-3">-->
 
                                 <h1 class="text-right float-right data-agg-heading">
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4">
-                    <% image_tag "feat-data-mockup.png" %><!--
+                    <%= image_tag "feat-data-mockup.png", :style=> "width: 100%; height: auto; object-fit: scale-down;", :srcset=>"feat-data-mockup@2x.png 2x, feat-data-mockup@3x.png 3x", class: "img-fluid" %><!--
                     <img src="assets/images/feat-data-mockup.png" srcset="assets/images/feat-data-mockup@2x.png 2x, assets/images/feat-data-mockup@3x.png 3x" class="img-fluid"  data-mh="data-agg" style="width: 100%; height: auto; object-fit: scale-down;">-->
                 </div>
             </div>
@@ -179,13 +179,13 @@
                 <div class="col-lg-6 col-md-4">
                     <div class="d-flex h-100 w-100">
                         <div class="row justify-content-center align-self-center width-100">
-                            <% image_tag "feat-khub-mockup.png" %><!--
+                            <%= image_tag "feat-khub-mockup.png", class: "img-fluid img-responsive", :style=>"width: 100%; height: auto; object-fit: scale-down;" %><!--
                             <img src="assets/images/feat-khub-mockup.png" srcset="assets/images/feat-khub-mockup@2x.png 2x, assets/images/feat-khub-mockup@3x.png 3x" class="img-fluid img-responsive" style="width: 100%; height: auto; object-fit: scale-down;">-->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-8">
-                    <% image_tag "khub-logo.png" %><!--
+                    <%= image_tag "khub-logo.png", class: "img-fluid img-responsive" %><!--
                     <img src="assets/images/khub-logo.png" srcset="assets/images/khub-logo@2x.png 2x, assets/images/khub-logo@3x.png 3x" class="img-fluid img-responsive">-->
                     <h2 class="mt-5 hub-heading" style="position: relative;">CONNECTED PATIENT<br />RECRUITMENT AT<br />YOUR <br class="d-block d-lg-none"/> FINGERTIPS <% image_tag "feat-khub-icon.svg" %></h2>
                     <p class="mt-5 hub-text">A single, connected eco-system closing the loop, reporting on, and optimizing conversion tactics in real time... All yours with every campaign.</p>
@@ -194,17 +194,19 @@
 
             <div class="row clearfix d-flex d-md-none">
                 <div class="col-md-12 pb-3">
-                    <% image_tag "khub-logo.png" %><!--
+                    <%= image_tag "khub-logo.png", class: "img-fluid" %><!--
                     <img src="assets/images/khub-logo.png" srcset="assets/images/khub-logo@2x.png 2x, assets/images/khub-logo@3x.png 3x" class="img-fluid">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3">
-                    <img src="assets/images/feat-khub-mockup.png" srcset="assets/images/feat-khub-mockup@2x.png 2x, assets/images/feat-khub-mockup@3x.png 3x" class="img-fluid">
+                <%= image_tag 'feat-khub-mockup.png', class: "img-fluid" %><!--
+                    <img src="assets/images/feat-khub-mockup.png" srcset="assets/images/feat-khub-mockup@2x.png 2x, assets/images/feat-khub-mockup@3x.png 3x" class="img-fluid">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
                     <p class="hub-heading-mobile">CONNECTED PATIENT<br />RECRUITMENT AT<br />YOUR FINGERTIPS</p>
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
-                    <img src="assets/images/feat-khub-icon.svg">
+                    <%= image_tag "feat-khub-icon.svg" %>
+                    
                 </div>
                 <div class="col-md-12 pt-3">
                     <p class="hub-text-mobile">A single, connected eco-system closing the loop, reporting on, and optimizing conversion tactics in real time... All yours with every campaign.</p>
@@ -219,13 +221,14 @@
         <div class="container">
             <div class="row clearfix d-none d-md-flex">
                 <div class="col-lg-6 col-md-8">
-                    <h2 class="mt-5 mb-5 lead-gen-heading" style="position: relative;">CLINICAL TRIAL PATIENT<br />LEAD GENERATION<br />UPGRADED <img src="assets/images/feat-lead-gen-icon.svg" class="clinical-trial-icon"></h2>
+                    <h2 class="mt-5 mb-5 lead-gen-heading" style="position: relative;">CLINICAL TRIAL PATIENT<br />LEAD GENERATION<br />UPGRADED <%= image_tag "feat-lead-gen-icon.svg", :style=> "position: absolute; bottom: -40px; left: -40px;" %></h2>
                     <p class="mt-5 pt-2 lead-gen-text">Pre-IRB-approved clinical trial patient lead generation landing pages & pre-screeners</p>
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <div class="d-flex h-100 w-100">
                         <div class="row justify-content-center align-self-center width-100">
-                            <img src="assets/images/feat-lead-gen-mockup.png" srcset="assets/images/feat-lead-gen-mockup@2x.png 2x, assets/images/feat-lead-gen-mockup@3x.png 3x" class="img-responsive" style="width: 100%; height: auto; object-fit: scale-down; ">
+                            <%= image_tag "feat-lead-gen-mockup.png", class:"img-responsive", :style=> "width: 100%; height: auto; object-fit: scale-down; " %><!--
+                            <img src="assets/images/feat-lead-gen-mockup.png" srcset="assets/images/feat-lead-gen-mockup@2x.png 2x, assets/images/feat-lead-gen-mockup@3x.png 3x" class="img-responsive" style="width: 100%; height: auto; object-fit: scale-down; ">-->
                         </div>
                     </div>
                 </div>
@@ -233,13 +236,14 @@
 
             <div class="row clearfix d-flex d-md-none">
                 <div class="col-md-12 pb-3">
-                    <img src="assets/images/feat-lead-gen-mockup.png" srcset="assets/images/feat-lead-gen-mockup@2x.png 2x, assets/images/feat-lead-gen-mockup@3x.png 3x" class="img-responsive img-fluid">
+                    <%= image_tag "feat-lead-gen-mockup.png", class: "img-responsive img-fluid" %><!--
+                    <img src="assets/images/feat-lead-gen-mockup.png" srcset="assets/images/feat-lead-gen-mockup@2x.png 2x, assets/images/feat-lead-gen-mockup@3x.png 3x" class="img-responsive img-fluid">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
                     <p class="lead-gen-heading-mobile">CLINICAL TRIAL PATIENT<br />LEAD GENERATION<br />UPGRADED</p>
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
-                    <img src="assets/images/feat-lead-gen-icon.svg">
+                    <%= image_tag "feat-lead-gen-icon.svg" %>
                 </div>
                 <div class="col-md-12 pt-3">
                     <p class="lead-gen-text-mobile">Pre-IRB-approved clinical trial patient lead generation landing pages & pre-screeners</p>
@@ -257,7 +261,7 @@
                     <div class="d-flex h-100 w-100">
                         <div class="row justify-content-center align-self-center width-100">
                             <div class="float-left mr-3">
-                                <img src="assets/images/feat-dash-icon.svg" class="feat-dash-icon">
+                                <%= image_tag "feat-dash-icon.svg", class: "feat-dash-icon" %>
                             </div>
                             <div class="float-right">
                                 <h2 class="performance-heading">ROI HAS NEVER<br />BEEN CLEARER</h2>
@@ -267,13 +271,14 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4">
-                    <img src="assets/images/feat-dash-mockup.png" srcset="assets/images/feat-dash-mockup@2x.png 2x, assets/images/feat-dash-mockup@3x.png 3x" class="img-fluid">
+                    <%= image_tag "feat-dash-mockup.png", :srcset=> "feat-dash-mockup@2x.png 2x, feat-dash-mockup@3x.png 3x", class: "img-fluid" %>
                 </div>
             </div>
 
             <div class="row clearfix d-flex d-md-none">
                 <div class="col-md-12 pb-3">
-                    <img src="assets/images/feat-dash-mockup.png" srcset="assets/images/feat-dash-mockup@2x.png 2x, assets/images/feat-dash-mockup@3x.png 3x" class="img-fluid img-responsive">
+                    <%= image_tag "feat-dash-mockup.png", class:"img-fluid img-responsive"%><!--
+                    <img src="assets/images/feat-dash-mockup.png" srcset="assets/images/feat-dash-mockup@2x.png 2x, assets/images/feat-dash-mockup@3x.png 3x" class="img-fluid img-responsive">-->
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
                     <p class="performance-heading-mobile">ROI HAS NEVER<br />BEEN CLEARER</p>
@@ -296,14 +301,15 @@
                 <div class="col-lg-6 col-md-4">
                     <div class="d-flex h-100 w-100">
                         <div class="row justify-content-center align-self-center width-100">
-                            <img src="assets/images/feat-supp-mockup.png" srcset="assets/images/feat-supp-mockup@2x.png 2x, assets/images/feat-supp-mockup@3x.png 3x" class="img-responsive" style="width: 100%; height: auto; object-fit: scale-down;">
+                            <%= image_tag "feat-supp-mockup.png", class: "img-responsive", :style=> "width: 100%; height: auto; object-fit: scale-down;"%><!--
+                            <img src="assets/images/feat-supp-mockup.png" srcset="assets/images/feat-supp-mockup@2x.png 2x, assets/images/feat-supp-mockup@3x.png 3x" class="img-responsive" style="width: 100%; height: auto; object-fit: scale-down;">-->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-8">
                     <div class="d-flex h-100 w-100">
                         <div class="row justify-content-center align-self-center width-100 text-left">
-                            <h2 class="mt-5 analytics-heading text-left w-100" style="position: relative;">EXPERT ANALYTICAL<br />SUPPORT AT THE<br />CLICK OF A <br class="d-block d-lg-none"/> BUTTON <img src="assets/images/feat-supp-icon.svg" class="img-fluid" style="position: absolute; bottom: -50px; right: 0;"></h2>
+                            <h2 class="mt-5 analytics-heading text-left w-100" style="position: relative;">EXPERT ANALYTICAL<br />SUPPORT AT THE<br />CLICK OF A <br class="d-block d-lg-none"/> BUTTON <%= image_tag "feat-supp-icon.svg", class:"img-fluid", :style=> "position: absolute; bottom: -50px; right: 0;" %></h2>
                             <p class="mt-5 pt-5 analytics-text">Account services and expert media analyst support connecting you with our team of media pros who are hands on with KrescendoMed account, data, and analysis every day.</p>
                         </div>
                     </div>
@@ -312,13 +318,13 @@
 
             <div class="row clearfix d-flex d-md-none">
                 <div class="col-md-12 pb-3">
-                    <img src="assets/images/feat-supp-mockup.png" srcset="assets/images/feat-supp-mockup@2x.png 2x, assets/images/feat-supp-mockup@3x.png 3x" class="img-responsive img-fluid">
+                    <%= image_tag "feat-supp-mockup.png", :srcset=> "feat-supp-mockup@2x.png 2x, feat-supp-mockup@3x.png 3x", class: "img-responsive img-fluid" %>
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
                     <p class="analytics-heading-mobile">EXPERT ANALYTICAL<br />SUPPORT AT THE<br />CLICK OF A BUTTON</p>
                 </div>
                 <div class="col-md-12 pt-3 pb-3 text-center">
-                    <img src="assets/images/feat-supp-icon.svg">
+                    <%= image_tag "feat-supp-icon.svg" %>
                 </div>
                 <div class="col-md-12 pt-3">
                     <p class="analytics-text-mobile">Account services and expert media analyst support connecting you with our team of media pros who are hands on with KrescendoMed account, data , and analysis every day.</p>
